@@ -2,6 +2,7 @@
   "name": "airbnb",
   "private": true,
   "dependencies": {
+    "@hotwired/stimulus": "^3.0.1",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
@@ -11,8 +12,8 @@
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^9",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
