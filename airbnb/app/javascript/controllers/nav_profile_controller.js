@@ -1,10 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
+import { useClickOutside } from 'stimulus-use'
 
 // Connects to data-controller="profile"
 export default class extends Controller {
   static values = {hidden: false}
 
   connect() {
+    useClickOutside(this);
   }
 
   dropdown(){
