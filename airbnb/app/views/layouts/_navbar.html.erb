@@ -16,11 +16,11 @@
 
 		<div id="profile_nav-dropdown" class="hidden bg-white w-60 origin-top-right absolute sm:right-24 top-40 sm:top-20 w-54 rounded-xl border-gray-300 py-2 border z-40">
 			<ul class="space-y-2 text-sm text-gray-900 py-0.5">
-				<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Sign Up</li>	
 				<% if user_signed_in?%>
-				<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full"><%= link_to "Sign out", logout_path, method: :delete  %></li>					
+				<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full"><%= link_to "Sign out", destroy_user_session_url, method: :delete  %></li>					
 				<% else %>
 					<li onclick="showLogin()" class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Log in</li>	
+					<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Sign Up</li>	
 				<% end %>
 				<li><hr class="border-b-1 border-gray-200 w-full"/></li>
 				<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full mt-3">Host Your Home</li>	
