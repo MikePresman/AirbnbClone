@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_26_061753) do
+ActiveRecord::Schema.define(version: 2021_12_28_012554) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "city", force: :cascade do |t|
+    t.string "city_name", null: false
+    t.string "country", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "rents", force: :cascade do |t|
+    t.integer "average_score"
+    t.string "rent_name", null: false
+    t.integer "price", null: false
+    t.bigint "user_id", null: false
+    t.bigint "city_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["city_id"], name: "index_rents_on_city_id"
+    t.index ["user_id"], name: "index_rents_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +46,6 @@ ActiveRecord::Schema.define(version: 2021_12_26_061753) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "rents", "city"
+  add_foreign_key "rents", "users"
 end
