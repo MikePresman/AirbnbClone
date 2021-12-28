@@ -27,7 +27,7 @@
 				<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Host Your Experience</li>
 				<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Help</li>
 
-        <%if current_user.is_admin? %>
+        <%if current_user && current_user.is_admin? %>
           <li><hr class="border-b-1 border-gray-200 w-full"/></li>
           <li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Add Cities</li>
           <li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Add Cities</li>
