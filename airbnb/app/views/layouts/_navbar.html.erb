@@ -17,7 +17,9 @@
 		<div id="profile_nav-dropdown" class="hidden bg-white w-60 origin-top-right overflow-y-scroll max-h-56 absolute sm:right-24 top-40 sm:top-20 w-54 rounded-xl border-gray-300 py-2 border z-40">
 			<ul class="space-y-2 text-sm text-gray-900 py-0.5">
 				<% if user_signed_in? %>
-				<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full"><%= link_to "Sign out", destroy_user_session_url, method: :delete  %></li>
+        <%= link_to destroy_user_session_url, method: :delete do %>
+				  <li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Sign out</li>
+        <% end %>
 				<% else %>
 					<li onclick="showLogin()" class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Log in</li>
 					<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Sign Up</li>
@@ -29,10 +31,9 @@
 
         <%if current_user && current_user.is_admin? %>
           <li><hr class="border-b-1 border-gray-200 w-full"/></li>
-          <li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Add Cities</li>
-          <li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Add Cities</li>
-          <li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Add Cities</li>
-          <li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Add Cities</li>
+          <%= link_to cities_path do %>
+            <li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full mt-2">Admin</li>
+          <% end %>
         <%end%>
 
 			</ul>
@@ -47,6 +48,4 @@ function showLogin(){
 	document.getElementById("profile_nav-dropdown").classList.toggle("hidden");
 	document.getElementById("login-modal").classList.toggle("hidden");
 }
-
-
 </script>

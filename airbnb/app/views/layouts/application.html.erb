@@ -14,6 +14,9 @@
   <body>
     <div class="px-24">
       <%= render "layouts/navbar" %>
+      <% if request.path.start_with?("/admin") %>
+        <%= render partial: "admin/shared/admin_nav" %>
+      <% end %>
       <%= yield %>
     </div>
   </body>

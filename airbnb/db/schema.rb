@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2021_12_28_013252) do
+ActiveRecord::Schema.define(version: 2021_12_28_035705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +28,17 @@ ActiveRecord::Schema.define(version: 2021_12_28_013252) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "display_image"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "username"
+    t.string "display_name"
+    t.integer "age"
+    t.date "date_of_birth"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "rents", force: :cascade do |t|
@@ -56,6 +66,7 @@ ActiveRecord::Schema.define(version: 2021_12_28_013252) do
   end
 
   add_foreign_key "admins", "users"
+  add_foreign_key "profiles", "users"
   add_foreign_key "rents", "city"
   add_foreign_key "rents", "users"
 end

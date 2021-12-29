@@ -14,6 +14,15 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root "home#index"
 
+
   resources :admin
+
+  scope :admin do
+    get "/cities", to:"geography_listings#index"
+    get "/city/:id", to:"geography_listings#show"
+    get "/city/new", to: "geography_listings#new"
+    post "/city/new", to: "geography_listings#create"
+  end
+
 
 end
