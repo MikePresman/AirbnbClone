@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_28_035705) do
+ActiveRecord::Schema.define(version: 2022_01_01_035949) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_12_28_035705) do
     t.index ["user_id"], name: "index_admins_on_user_id"
   end
 
-  create_table "city", force: :cascade do |t|
+  create_table "cities", force: :cascade do |t|
     t.string "city_name", null: false
     t.string "country", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -46,10 +46,10 @@ ActiveRecord::Schema.define(version: 2021_12_28_035705) do
     t.string "rent_name", null: false
     t.integer "price", null: false
     t.bigint "user_id", null: false
-    t.bigint "city_id"
+    t.bigint "cities_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["city_id"], name: "index_rents_on_city_id"
+    t.index ["cities_id"], name: "index_rents_on_cities_id"
     t.index ["user_id"], name: "index_rents_on_user_id"
   end
 
@@ -67,6 +67,6 @@ ActiveRecord::Schema.define(version: 2021_12_28_035705) do
 
   add_foreign_key "admins", "users"
   add_foreign_key "profiles", "users"
-  add_foreign_key "rents", "city"
+  add_foreign_key "rents", "cities", column: "cities_id"
   add_foreign_key "rents", "users"
 end

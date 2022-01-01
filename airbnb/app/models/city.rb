@@ -1,3 +1,3 @@
 class City < ApplicationRecord
-  belongs_to_many :rent
+  belongs_to :rent
 end
