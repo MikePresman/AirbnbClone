@@ -11,7 +11,7 @@
 
         <div class="flex flex-col space-y-2">
           <%=form.text_field :city_name, class: "border border-gray-900 rounded-md" %>
-          <%=form.collection_select :country, @countries, class: "border border-gray-900 rounded-md"%>
+          <%=form.select :country, Constants::COUNTRIES, {}, {required: true, class: "border border-gray-900 rounded-md bg-white py-1"}%>
           <%=form.text_field :display_image, class: "border border-gray-900 rounded-md"%>
         </div>
       </div>
