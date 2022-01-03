@@ -15,11 +15,11 @@ Rails.application.routes.draw do
 
   scope :admin do
     get "/cities", to: "geography_listings#index", as: "all_cities"
-    get "/city/new", to: "geography_listings#new", as: "new_city"
-    post "/city/new", to: "geography_listings#create"
+    get "/cities/new", to: "geography_listings#new", as: "new_city"
+    post "/cities", to: "geography_listings#create"
 
-    get "/city/:id", to: "geography_listings#show"
-    get "/cities/:id", to: "geography_listings#edit", as: "edit_city"
+    get "/cities/:id", to: "geography_listings#show"
+    get "/cities/:id/edit", to: "geography_listings#edit", as: "edit_city"
     put "/cities/:id", to: "geography_listings#update"
   end
 

@@ -9,20 +9,20 @@ class GeographyListingsController < ApplicationController
 
   def new
     @city = City.new
-    @countries = Constant::COUNTRIES
   end
 
   def create
-    city = new_city_validation
-    if new_city.save
-
+    @city = City.new(city_params)
+    if @city.save
+      redirect_to :index
     else
-
+      flash[:error] = "Error"
+      render "new"
     end
   end
 
   private
-  def new_city_validation
+  def city_params
     params.require(:city).permit(
       :city_name,
       :country,
