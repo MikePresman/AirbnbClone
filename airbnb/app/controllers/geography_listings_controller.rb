@@ -14,7 +14,7 @@ class GeographyListingsController < ApplicationController
   def create
     @city = City.new(city_params)
     if @city.save
-      redirect_to :index
+      redirect_to "all_cities_index"
     else
       flash[:error] = "Error"
       render "new"
