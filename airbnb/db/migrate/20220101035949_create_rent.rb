@@ -6,8 +6,8 @@ class CreateRent < ActiveRecord::Migration[6.1]
       t.integer "price", null: false
 
       t.belongs_to :user, foreign_key: true, null: false
-      t.belongs_to :available_cities, foreign_key: true
-      
+      t.belongs_to :cities, foreign_key: true
+
       t.timestamps
     end
   end
