@@ -1,10 +1,19 @@
-class GeographyListingsController < ApplicationController
+class CitiesController < ApplicationController
   before_action :authenticate_user!
   before_action :validate_admin
 
 
   def index
 
+  end
+
+  def edit 
+  end
+
+  def edit 
+  end
+
+  def update 
   end
 
   def new
