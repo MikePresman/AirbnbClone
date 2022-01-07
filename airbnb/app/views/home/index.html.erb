@@ -1,5 +1,7 @@
-<div class="flex flex-wrap flex-row items-start  sm:space-x-12">
+<div class="flex flex-col ">
+  <div class="ml-auto mr-auto flex flex-row space-x-12">
   <% @top_ten_cities.each do |city| %>
       <%= render partial: "home/shared/location_card", locals: {city_name: city.city_name, image: city.display_image, city: city} %>
   <% end %>
+  </div>
 </div>
