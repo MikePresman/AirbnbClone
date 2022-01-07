@@ -1,3 +1,8 @@
+<% if @city.errors.any? %>
+  <%= @city.errors.full_messages.each do |message| %>
+    <%=message%>
+  <%end%>
+<%end%>
 <div class="py-2 px-2 flex flex-col">
   <span>Add a new City</span>
   <div class="mr-auto ml-auto">

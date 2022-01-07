@@ -4,11 +4,9 @@ class City < ApplicationRecord
   validates :city_name, :presence => true
   validates :country, :presence => true
 
-  validate :entry_must_be_unique
+  validate :entry_is_unique, on: [:create, :update]
 
-  #TODO FIX
-  def entry_must_be_unique
-    !City.where(city_name: city_name, country: country).exists?
+  def entry_is_unique
+    errors.add(:city, ("City not unique")) if City.where(city_name: city_name, country: country).exists?
   end
-
 end
