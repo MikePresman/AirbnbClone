@@ -13,14 +13,17 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  scope :admin do
-    get "/cities", to: "geography_listings#index", as: "all_cities"
-    get "/cities/new", to: "geography_listings#new", as: "new_city"
-    post "/cities", to: "geography_listings#create"
+  resources :cities
 
-    get "/cities/:id", to: "geography_listings#show"
-    get "/cities/:id/edit", to: "geography_listings#edit", as: "edit_city"
-    put "/cities/:id", to: "geography_listings#update"
+  #TODO this should be in a namespace to seperate the cities in admin and for regular users
+  scope :admin do
+    get "/cities", to: "cities#index", as: "all_cities"
+    get "/cities/new", to: "cities#new"
+    post "/cities", to: "cities#create"
+
+    get "/cities/:id", to: "cities#show"
+    get "/cities/:id/edit", to: "cities#edit"
+    put "/cities/:id", to: "cities#update"
   end
 
   resources :admin
