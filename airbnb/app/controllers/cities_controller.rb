@@ -11,9 +11,10 @@ class CitiesController < ApplicationController
   end
 
   def edit 
+    @city = City.select(id = params[:id])
   end
 
-  def update 
+  def update
   end
 
   def new
