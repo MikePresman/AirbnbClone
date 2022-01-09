@@ -15,8 +15,7 @@ Rails.application.routes.draw do
 
   resources :cities
 
-  #TODO this should be in a namespace to seperate the cities in admin and for regular users
-  scope :admin do
+  namespace :admin do
     get "/cities", to: "cities#index", as: "all_cities"
     get "/cities/new", to: "cities#new"
     post "/cities", to: "cities#create"
