@@ -15,4 +15,8 @@ export default class extends Controller {
   login(){
     document.getElementById("login-modal").classList.toggle("hidden");
   }
+
+  close(){
+    document.getElementById("profile_nav-dropdown").classList.add("hidden");
+  }
 }
