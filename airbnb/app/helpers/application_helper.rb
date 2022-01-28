@@ -11,7 +11,7 @@ module ApplicationHelper
 		@devise_mapping ||= Devise.mappings[:user]
 	end
 
-  #TODO
+  #TODO -> replace in _admin_nav.html.erb
   def link_is_current_page(path)
 
   end
