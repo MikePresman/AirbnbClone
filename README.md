@@ -15,5 +15,3 @@
   rails s
 
 ## Auth Info
-username: mikepresman@gmail.com
-password: Apple1234
