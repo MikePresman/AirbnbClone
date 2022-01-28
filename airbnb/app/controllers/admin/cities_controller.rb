@@ -3,16 +3,26 @@ class Admin::CitiesController < ApplicationController
   before_action :validate_admin
 
   def index
-
   end
 
   def edit 
   end
 
+  def show
+    @city = City.find_by_id(params[:id])
+  end
+
   def edit 
+    @city = City.find_by_id(params[:id])
   end
 
   def update 
+    @city = City.find_by_id(params[:id])
+    if @city.update(city_params) 
+      redirect_to admin_cities_new_path
+    else
+      render :edit, status: unprocessable_entity
+    end
   end
 
   def new

@@ -10,19 +10,13 @@ Rails.application.routes.draw do
     get "/register", to: "devise/registrations#new"
     post "/register", to: "devise/registrations#create"
   end
-
+  
   devise_for :users
 
   resources :cities
 
   namespace :admin do
-    get "/cities", to: "cities#index", as: "all_cities"
-    get "/cities/new", to: "cities#new"
-    post "/cities", to: "cities#create"
-
-    get "/cities/:id", to: "cities#show"
-    get "/cities/:id/edit", to: "cities#edit"
-    put "/cities/:id", to: "cities#update"
+    resources :cities
   end
 
   resources :admin

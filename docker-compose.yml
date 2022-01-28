@@ -1,0 +1,17 @@
+version: "3"
+services:
+  redis:
+    image: redis:latest
+    container_name: airbnb_redis
+    ports:
+      - 6379:6379
+  db:
+    image: postgres:latest
+    container_name: airbnb_postgres_db
+    environment:
+      database: airbnb_development
+      POSTGRES_USER: username
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
+      

@@ -1,1 +1,8 @@
-<%= @city.inspect %>
+<%= turbo_stream_from @city %>
+<div id="<%=dom_id(@city)%>">
+  <%= render @city %>
+</div>
+
+
+
+
