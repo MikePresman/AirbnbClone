@@ -12,9 +12,9 @@ services:
       - ./postgres-data:/var/lib/postgresql/data
     container_name: airbnb_postgres_db
     environment:
-      database: airbnb_development
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      DATABASE: ${DATABASE}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - 5432:5432
       
