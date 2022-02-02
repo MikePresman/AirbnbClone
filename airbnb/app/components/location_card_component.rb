@@ -8,7 +8,7 @@ class LocationCardComponent < ViewComponent::Base
   end
 
   #TODO figure out helper for passing url so we can use this card much more abstractly
-  #TODO Turbo Streams Much better
+  #TODO replace turbo-rails + stimulusJS with Preact
   #TODO Flipper
   #TODO Testing
 
