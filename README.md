@@ -3,15 +3,11 @@
   - cp .env{.example,}
   - source .env
   - docker-compose up -d
-  - docker exec -it airbnb_postgres_db psql -U postgres
-  - \password
-  - first -> "password"
-  - confirm -> "password"
+  - rails db:create
+  - rails db:migrate
+  - rails db:seed
+  - rails s
 
-  rails db:create
-  rails db:migrate
-  rails db:seed
-
-  rails s
-
+## Start after First time
+- make local-dev
 ## Auth Info
