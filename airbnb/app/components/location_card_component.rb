@@ -7,8 +7,9 @@ class LocationCardComponent < ViewComponent::Base
     @image = image
   end
 
+
+  #TODO fix docker volume being on the repo
   #TODO figure out helper for passing url so we can use this card much more abstractly
-  #TODO replace turbo-rails + stimulusJS with Preact
   #TODO Flipper
   #TODO Testing
 
