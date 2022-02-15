@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #mikepresman@gmail.com -> Apple1234
-    City.create(city_name: "New York City", country: "United States", display_image: "https://a0.muscache.com/im/pictures/3d3a87bc-9a2c-47b7-8a36-22969be34e5d.jpg?im_w=720")    
+    City.create(city_name: "New York City", country: "United States", display_image: "https://eatour.com/wp-content/uploads/2018/10/new-york-city-wide-8k-2z.jpg")    
     City.create(city_name: "San Fransciso", country: "United States", display_image: "https://www.fodors.com/assets/destinations/54494/alamo-square-san-francisco-california-usa_980x650.jpg")    
     City.create(city_name: "Malibu", country: "United States", display_image: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRwSYLWzJjA7bUryfvQlvrQtJtT1z7dwQ7CULY4RcPvED_2iUm1voCKROx5QIJXUoiADZTspTFB92iB0g")    
     City.create(city_name: "Austin", country: "United States", display_image: "http://res.cloudinary.com/simpleview/image/upload/v1601501261/clients/austin/Barton_Springs_Pool_Views_Credit_Ryan_Kyte_Lifetime_Usage_f1c319f3-478e-4a04-ae35-613dfb525d0a.jpg")    
