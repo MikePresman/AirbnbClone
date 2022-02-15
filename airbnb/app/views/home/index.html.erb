@@ -1,9 +1,12 @@
-<div class="flex flex-col ">
-  <div class="ml-auto mr-auto flex flex-row flex-wrap -m-4 justify-center">
-  <% @top_ten_cities.each do |city| %>
-      <div class="p-4">
-        <%= render LocationCardComponent.new(obj: city, name: city.city_name, image: city.display_image) %>
-      </div>
-  <% end %>
+<div class="flex flex-col mt-4">
+  <div class="ml-auto mr-auto">
+    <span class="ml-auto mr-auto text-left text-2xl text-widest text-gray-900">Top Places to Visit</span>
+    <div class="flex flex-row flex-wrap -m-4 justify-center">
+      <% @top_ten_cities.each do |city| %>
+          <div class="pl-4 pr-4">
+            <%= render LocationCardComponent.new(obj: city, name: city.city_name, image: city.display_image) %>
+          </div>
+      <% end %>
+    </div>
   </div>
 </div>

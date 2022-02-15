@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <div class="px-24">
+    <div>
       <%= render "layouts/navbar" %>
       <% if request.path.start_with?("/admin") %>
         <%= render partial: "admin/shared/admin_nav" %>
