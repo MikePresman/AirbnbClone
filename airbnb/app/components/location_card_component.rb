@@ -6,10 +6,17 @@ class LocationCardComponent < ViewComponent::Base
     @name = name
     @image = image
   end
-
+  
+  #TODO Finish login/signup Modal
   #TODO figure out helper for passing url so we can use this card much more abstractly
-  #TODO replace turbo-rails + stimulusJS with Preact
-  #TODO Flipper
+  
+  #See developers.forem.com
+  #TODO add pundit or rolify
   #TODO Testing
+  #TODO Flipper
+  #Add rental
+  #add experiences
+  
+
 
 end
