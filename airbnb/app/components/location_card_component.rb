@@ -7,15 +7,16 @@ class LocationCardComponent < ViewComponent::Base
     @image = image
   end
   
-  #TODO Finish login/signup Modal
-  #TODO figure out helper for passing url so we can use this card much more abstractly
-  
-  #See developers.forem.com
-  #TODO add pundit or rolify
+  #fix registration
+  #TODO Finish login/signup modal -> consider alpine for click.away
   #TODO Testing
+  #TODO figure out helper for passing url so we can use this card much more abstractly
+  #TODO Ransack
+  #TODO add pundit or rolify
   #TODO Flipper
   #Add rental
   #add experiences
+  #add online etc.
   
 
 
