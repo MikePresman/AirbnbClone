@@ -8,7 +8,8 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '../css/application.css'
 import "../controllers"
-import "@hotwired/turbo-rails"
+import { Turbo } from "@hotwired/turbo-rails"
+Turbo.session.drive = false
 
 Rails.start()
 ActiveStorage.start()
