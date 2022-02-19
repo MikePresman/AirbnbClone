@@ -8,12 +8,15 @@ class LocationCardComponent < ViewComponent::Base
   end
   
   #fix registration
-  #TODO Finish login/signup modal -> consider alpine for click.away
+  #TODO Finish login/signup modal
+  #TODO cleanup stimulus controllers
   #TODO Testing
   #TODO figure out helper for passing url so we can use this card much more abstractly
   #TODO Ransack
-  #TODO add pundit or rolify
+  #TODO add pundit or rollify
   #TODO Flipper
+  #TODO Ahoy gem
+
   #Add rental
   #add experiences
   #add online etc.
