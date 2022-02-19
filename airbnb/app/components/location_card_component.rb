@@ -7,7 +7,6 @@ class LocationCardComponent < ViewComponent::Base
     @image = image
   end
   
-  #fix registration
   #TODO Finish login/signup modal
   #TODO cleanup stimulus controllers
   #TODO Testing

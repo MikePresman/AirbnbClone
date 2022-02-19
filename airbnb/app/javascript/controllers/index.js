@@ -6,9 +6,3 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller.js"
 application.register("hello", HelloController)
-
-import NavProfileController from "./nav_profile_controller.js"
-application.register("nav-profile", NavProfileController)
-
-import LoginSignupController from "./login_signup_controller.js"
-application.register("login-signup", LoginSignupController)
