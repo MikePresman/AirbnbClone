@@ -1,4 +1,4 @@
-<div x-data="{showLogin: false}">
+<div x-data="{showLogin: false, showRegister: false}">
 	<nav class="bg-white flex flex-col sm:flex-row justify-between pt-8 pb-6 px-24">
 		<div id="site_wide-logo" class="ml-auto mr-auto sm:ml-0 sm:mr-0">
 			<%= link_to root_path do%>
@@ -23,12 +23,12 @@
 					<%= link_to destroy_user_session_url, method: :delete do %>
 						<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Sign out</li>
 					<% end %>
+
 					<% else %>
 						<li @click="showLogin=true; show=false" class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Log in</li>
-						<%= link_to register_path, class: "block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full" do %>
-							<li class="">Sign Up</li>
-						<% end%>
+						<li @click="showRegister=true; show=false" class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Sign up</li>
 					<% end %>
+
 					<li><hr class="border-b-1 border-gray-200 w-full"/></li>
 					<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full mt-3">Host Your Home</li>
 					<li class="block cursor-pointer px-2 py-1 hover:bg-gray-200 w-full">Host Your Experience</li>
@@ -46,6 +46,10 @@
 	</nav>
 	<div x-show="showLogin">
 		<%= render 'devise/shared/login_modal', resource: User.new, resource_name: :user, devise_mapping: Devise.mappings[:user] %>
+	</div>
+
+	<div x-show="showRegister">
+		<%= render 'devise/shared/register_modal'%>
 	</div>
 </div>
 <hr class="absolute border-b border-gray-200 w-full"/>
