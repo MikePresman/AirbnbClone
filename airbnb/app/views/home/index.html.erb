@@ -4,7 +4,7 @@
     <div class="flex flex-row flex-wrap -m-4 justify-center">
       <% @top_ten_cities.each do |city| %>
           <div class="pl-4 pr-4">
-            <%= render LocationCardComponent.new(obj: city, name: city.city_name, image: city.display_image, link: city_path) %>
+            <%= render LocationCardComponent.new(obj: city, name: city.city_name, image: city.display_image) %>
           </div>
       <% end %>
     </div>

@@ -6,18 +6,4 @@ class LocationCardComponent < ViewComponent::Base
     @name = name
     @image = image
   end
-  
-  # TODO figure out helper for passing url so we can use this card much more abstractly
-  # TODO Testing -> RSpec
-  # TODO Ransack
-  # TODO Rolify 
-  # TODO Flipper
-  # TODO Pre-commit. Secrets and rubocop
-  # TODO Ahoy gem
-
-  #Add rental
-  #add experiences
-  #add online etc.
-
-
 end

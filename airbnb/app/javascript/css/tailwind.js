@@ -3,7 +3,11 @@ module.exports = {
   theme: {
     fontFamily: {
     },
-    extend: {},
+    extend: {
+      height: {
+        '128': '32rem'
+      }
+    },
   },
   plugins: [],
 }
