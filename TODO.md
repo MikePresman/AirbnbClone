@@ -1,5 +1,6 @@
   https://primer.style/view-components/
   TODO Testing -> RSpec. Controllers, Models, Views
+  TODO Delete the ./test dir
   TODO Ransack
   #Add rental
   #add experiences
