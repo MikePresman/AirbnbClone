@@ -1,9 +1,8 @@
   https://primer.style/view-components/
-  TODO Testing -> RSpec. Controllers
-  TODO Ransack
   #Add rental
   #add experiences
   #add online etc.
+  TODO Ransack
 
   TODO Rolify 
   TODO Flipper

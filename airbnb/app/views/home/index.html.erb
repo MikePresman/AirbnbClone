@@ -1,6 +1,6 @@
 <div class="flex flex-col mt-4">
   <div class="ml-auto mr-auto">
-    <span class="md:ml-auto md:mr-auto text-3xl text-widest text-gray-900 md:flex-none flex justify-center md:justify-start">Top Places to Visit</span>
+    <span class="md:ml-auto md:mr-auto text-3xl text-widest text-gray-900 md:flex-none flex justify-center md:justify-start">Top Cities to Visit</span>
     <div class="flex flex-row flex-wrap -m-4 justify-center">
       <% @top_ten_cities.each do |city| %>
           <div class="pl-4 pr-4">
@@ -8,5 +8,14 @@
           </div>
       <% end %> 
     </div>
+  </div>
+
+  <span class="md:ml-auto md:mr-auto text-3xl text-widest text-gray-900 mt-12 md:flex-none flex justify-center md:justify-start">Top Cities to Visit</span>
+  <div class="flex flex-row flex-wrap justify-center">
+    <% @top_four_countries.each do |country| %>
+        <div class="pl-4 pr-4">
+          <%= render LargeCardComponent.new(name: country) %>
+        </div>
+    <% end %> 
   </div>
 </div>
