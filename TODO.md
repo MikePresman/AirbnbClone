@@ -1,7 +1,7 @@
   https://primer.style/view-components/
-  # Add rental
-  # add experiences
-  # add online etc.
+  # TODO Add rental
+  # TODO add experiences
+  # TODO add online etc.
   # TODO Ransack
 
   # TODO Rolify 
