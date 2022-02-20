@@ -1,5 +1,5 @@
   https://primer.style/view-components/
-  TODO Testing -> RSpec. Controllers, Models, Views
+  TODO Testing -> RSpec. Controllers
   TODO Ransack
   #Add rental
   #add experiences
@@ -9,6 +9,5 @@
   TODO Flipper
   TODO Pre-commit. Secrets and rubocop
   TODO Ahoy gem
-
   
 
