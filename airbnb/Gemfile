@@ -21,6 +21,7 @@ gem "view_component"
 #auth
 gem "devise"
 
+gem "config"
 
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
