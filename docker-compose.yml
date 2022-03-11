@@ -16,3 +16,4 @@ services:
     ports:
       - 5432:5432
       
+  # TODO add a volume to postgres
