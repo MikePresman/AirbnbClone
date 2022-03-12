@@ -294,7 +294,6 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spring
-  tzinfo-data
   view_component
   web-console (>= 4.1.0)
   webdrivers

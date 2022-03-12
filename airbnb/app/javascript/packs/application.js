@@ -8,6 +8,8 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '../css/application.css'
 import "../controllers"
+import InstantClick from 'instantclick'
 
+InstantClick.init()
 Rails.start()
 ActiveStorage.start()
