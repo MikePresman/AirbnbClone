@@ -6,8 +6,9 @@
 import Rails from "@rails/ujs"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
-import '../css/application.css'
 import "../controllers"
+import 'alpinejs'
+import '../css/application.css'
 
 Rails.start()
 ActiveStorage.start()
