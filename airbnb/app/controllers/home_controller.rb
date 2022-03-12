@@ -9,6 +9,8 @@ class HomeController < ApplicationController
   end
 
   def test_stream
+    puts params
+    puts request.query_parameters
     @value="new"
     render layout: false
   end
