@@ -14,7 +14,6 @@ gem "view_component" #resuable view components
 gem "devise" #auth
 gem "config" #config library to manage dev, prod, test, and secrets
 gem 'bootsnap', '>= 1.4.4', require: false # Reduces boot times through caching; required in config/boot.rb
-gem "sprockets-rails"
 # gem 'image_processing', '~> 1.2' # Use Active Storage variant
 gem "turbo-rails", "~> 1.0"
 

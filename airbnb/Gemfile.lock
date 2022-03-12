@@ -322,7 +322,6 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spring
-  sprockets-rails
   turbo-rails (~> 1.0)
   view_component
   web-console (>= 4.1.0)

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   devise_for :users
 
   root "home#index"
+
+  get "/stream_a", to: "home#test_stream"
   
   resources :cities
   
