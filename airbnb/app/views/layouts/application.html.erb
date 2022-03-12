@@ -6,9 +6,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     
-    <%= stylesheet_link_tag 'application'%>
-    <%= javascript_pack_tag 'application'%>
-    <%= stylesheet_pack_tag 'application'%>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload'%>
+    <%= javascript_pack_tag 'application', 'data-turbo-track': 'reload'%>
+    <%= stylesheet_pack_tag 'application', 'data-turbo-track': 'reload'%>
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://unpkg.com/htmx.org@1.7.0"></script>
@@ -24,12 +24,3 @@
     </div>
   </body>
 </html>
-
-
-<script>
-//fixes the HTMX CSRF token problem
-document.addEventListener('htmx:configRequest', (event) => {
-  const csrf_token = document.querySelector('[name="csrf-token"]').content
-  event.detail.parameters["authenticity_token"] = csrf_token
-})
-</script>
