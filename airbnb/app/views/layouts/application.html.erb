@@ -16,7 +16,7 @@
 
   <body>
     <div>
-      <%= render "layouts/navbar" %>
+      <%= render partial:"layouts/navbar" unless @disable_nav %>
       <% if request.path.start_with?("/admin") %>
         <%= render partial: "admin/shared/admin_nav" %>
       <% end %>
@@ -25,3 +25,11 @@
   </body>
 </html>
 
+
+<script>
+//fixes the HTMX CSRF token problem
+document.addEventListener('htmx:configRequest', (event) => {
+  const csrf_token = document.querySelector('[name="csrf-token"]').content
+  event.detail.parameters["authenticity_token"] = csrf_token
+})
+</script>

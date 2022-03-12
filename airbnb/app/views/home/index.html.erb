@@ -18,4 +18,14 @@
         </div>
     <% end %> 
   </div>
+
+    <span id="replaceMe">
+      <%=@value_2%>
+    </span>
+
+  
+  <button name="something" value="works" hx-target="#replaceMe", hx-swap="innerHTML" hx-post="/home/value">
+  <input hidden name="something" value="something">
+  Click Me  
+  </span>
 </div>
