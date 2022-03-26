@@ -1,14 +1,16 @@
 # README
 ## First Time Setup
 ####  From root directory
-
+```
+cp .env{.example,}
+source .env
+```
+ 
 ###### Easy Command: `make local-dev`
 
 ## OR
 ```
-   cp .env{.example,}
-   source .env
-   docker-compose up -d
+  docker-compose up -d
 ```
 #####  then cd into ./airbnb and run...
 ```
