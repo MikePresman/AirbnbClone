@@ -1,25 +1,34 @@
-# README
-## First Time Setup
-####  From root directory
-```
+  # README
+ ## First Time Setup
+ ```
 cp .env{.example,}
 source .env
 ```
+### Then...
+run `make local-dev`   
+### OR
+ ```
+docker-compose up -d
+cd ./airbnb
+- rails db:create
+- rails db:migrate
+- rails db:seed
+- rails s
+```
  
-###### Easy Command: `make local-dev`
+ ## After First Time
+  ### Start Rails Server
+  ```rails s```
 
-## OR
-```
-  docker-compose up -d
-```
-#####  then cd into ./airbnb and run...
-```
-  - rails db:create
-  - rails db:migrate
-  - rails db:seed
-  - rails s
-```
+### Stop Containers
+`docker-compose stop`
 
-## Start after First time
-```rails s```
-## Auth Info
+### Start Containers
+`docker-compose start`
+
+### Delete Containers, Network, and Volumes
+` docker-compose down`
+
+  ## Auth Info
+~
+
