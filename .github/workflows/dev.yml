@@ -1,16 +1,12 @@
 name: "Workflow"
-on: 
-  push: 
-    branches:
-      - main
+on: pull_request
+
 jobs:
   build:
     runs-on: "ubuntu-latest"
-    steps:
-      - uses: "actions/checkout@master"
-      - name: "TODO to Issue"
-        uses: "alstr/todo-to-issue-action@v4.6.1"
-        id: "todo"
+      steps:
+      - uses: actions/checkout@v1
+
       - name: Rubocop Linter
         uses: luizfonseca/github-actions-rubocop@1.5.6
         env:
