@@ -1,13 +1,20 @@
-name: "Workflow"
-on: 
-  push: 
-    branches:
-      - main
+name: "Developer Workflow"
+on: [pull_request]
+
 jobs:
-  build:
+  linter:
     runs-on: "ubuntu-latest"
     steps:
-      - uses: "actions/checkout@master"
-      - name: "TODO to Issue"
-        uses: "alstr/todo-to-issue-action@v4.6.1"
-        id: "todo"
+      - name: Check out code
+        uses: actions/checkout@v1
+        
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.0
+
+      - name: rubocop
+        uses: reviewdog/action-rubocop@v2
+        with:
+          rubocop_version: gemfile
+          rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
+          reporter: github-pr-review # Default is github-pr-check
