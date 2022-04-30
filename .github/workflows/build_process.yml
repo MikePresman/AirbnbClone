@@ -29,4 +29,4 @@ jobs:
         with:
           context: "./airbnb"
           push: true
-          tags: "mikepresman/airbnbclone:nightly-${{steps.date.outputs.date}}
+          tags: "mikepresman/airbnbclone:nightly-${{steps.date.outputs.date}}"
