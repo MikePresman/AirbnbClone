@@ -5,12 +5,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-push:
     runs-on: "ubuntu-latest"
     steps:
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+        run: echo "::set-output name=date::$(date +'%Y%m%d')"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
