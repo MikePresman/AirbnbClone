@@ -9,5 +9,11 @@ jobs:
       with:
         ref: ${{ env.GITHUB_REF_NAME }}
 
-    - name: Rubocop Linter
-      uses: gimenete/rubocop-action@1.0
+    - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.0
+
+    - name: rubocop
+      uses: reviewdog/action-rubocop@v2
+      with:
+        rubocop_version: gemfile
