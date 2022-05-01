@@ -34,6 +34,6 @@ cd ./airbnb
 ~
 
 ## Secrets - [SoPS](https://github.com/mozilla/sops)
-- Encrypt:  sops -e -i <file_path>
-- Decrypt: sops -d -i <file_path>
 Encrypt and Decrypt: https://github.com/mozilla/sops#encrypt-or-decrypt-a-file-in-place
+- Encrypt: `sops -e -i <file_path>`
+- Decrypt: `sops -d -i <file_path>`
