@@ -1,0 +1,17 @@
+<%= form_for @city, url: admin_cities_path do |form| %>
+  <div class="flex flex-row space-x-2">
+    <div class="flex flex-col space-y-2">
+      <%=form.label :city_name, class: "text-gray-900 text-md" %>
+      <%=form.label :country, class: "text-gray-900 text-md" %>
+      <%=form.label :display_image, class: "text-gray-900 text-md" %>
+    </div>
+
+    <div class="flex flex-col space-y-2">
+      <%=form.text_field :city_name, class: "border border-gray-900 rounded-md" %>
+      <%=form.select :country, Constants::COUNTRIES, {}, {required: true, class: "border border-gray-900 rounded-md bg-white py-1"}%>
+      <%=form.text_field :display_image, class: "border border-gray-900 rounded-md"%>
+    </div>
+  </div>
+  <%= form.submit "Update City", class: "bg-green-400 tracking-wide px-2 rounded-md text-gray-900 cursor-pointer"%>
+<% end %>
+
